@@ -982,7 +982,7 @@ elif st.session_state.page=="dashboard":
 
 
 
-        st.markdown("### 📚 Project Knowledge Base")
+        
         
         """)
         questions = [
@@ -997,6 +997,11 @@ elif st.session_state.page=="dashboard":
         "📉 What factors cause rocket launch failure in the simulator?",
         "🔬 How can this simulator help understand real rocket missions?"
         ]
+
+        st.markdown("### 📚 Project Knowledge Base")
+
+
+        
         selected = st.selectbox("Select a Question", questions)
 
        
