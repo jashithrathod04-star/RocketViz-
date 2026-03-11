@@ -995,13 +995,7 @@ elif st.session_state.page=="dashboard":
         ]
         selected = st.selectbox("Select a Question", questions)
 
-        st.markdown(f"""
-        <div class="glass">
-        <h3>{selected}</h3>
-        <p style="font-size:18px">{answers[selected]}</p>
-        </div>
-        """, unsafe_allow_html=True)
-
+       
         answers = {
 
         "🚀 What is RocketViz AI?":
