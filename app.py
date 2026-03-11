@@ -979,6 +979,10 @@ elif st.session_state.page=="dashboard":
         and simulate rocket launches.
         
         Developed for CRS Artificial Intelligence course.
+
+
+
+        st.markdown("### 📚 Project Knowledge Base")
         
         """)
         questions = [
