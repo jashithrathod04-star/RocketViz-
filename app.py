@@ -628,8 +628,6 @@ elif st.session_state.page=="dashboard":
 
     tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
         "🏠 Home",
-        "🚀 Rocket Simulation",
-        "📊 Mission Analytics",
         "📊 Mission Data Explorer",
         "🚀 Rocket Physics Simulation",
         "📈 Mission Analytics",
@@ -642,79 +640,13 @@ elif st.session_state.page=="dashboard":
     # TAB 1 : ROCKET SIMULATION
     # ==========================================
 
-    with tab2:
-
-        st.markdown("<div class='glow'>Rocket Launch Simulator</div>",unsafe_allow_html=True)
-
-        thrust=st.slider("Thrust",10000,200000,50000)
-        payload=st.slider("Payload Weight",100,10000,2000)
-        fuel=st.slider("Fuel Amount",500,20000,5000)
-
-        g=9.81
-        mass=payload+fuel+5000
-
-        velocity=0
-        altitude=0
-
-        data=[]
-
-        for t in range(200):
-
-            drag=0.02*velocity**2
-
-            accel=(thrust-(mass*g)-drag)/mass
-
-            velocity+=accel
-            altitude+=velocity
-
-            fuel-=5
-            mass-=5
-
-            data.append([t,velocity,altitude])
-
-        df=pd.DataFrame(data,columns=["Time","Velocity","Altitude"])
-
-        fig=px.line(df,x="Time",y="Altitude",title="Rocket Altitude")
-
-        st.plotly_chart(fig,use_container_width=True)
+   
 
     # ==========================================
     # TAB 2 : ANALYTICS
     # ==========================================
 
-    with tab3:
-
-        st.markdown("<div class='glow'>Mission Analytics</div>",unsafe_allow_html=True)
-
-        n=200
-
-        df=pd.DataFrame({
-
-        "Payload Weight":np.random.randint(500,8000,n),
-
-        "Fuel Consumption":np.random.randint(2000,10000,n),
-
-        "Mission Cost":np.random.randint(50,500,n),
-
-        "Mission Success":np.random.choice(["Success","Failure"],n)
-
-        })
-
-        fig=px.scatter(
-        df,
-        x="Payload Weight",
-        y="Fuel Consumption",
-        color="Mission Success",
-        size="Mission Cost"
-        )
-
-        st.plotly_chart(fig,use_container_width=True)
-
-        fig2=px.histogram(df,x="Mission Cost")
-
-        st.plotly_chart(fig2,use_container_width=True)
-
-
+    
 
 
 
@@ -777,7 +709,7 @@ elif st.session_state.page=="dashboard":
     
 
 
-    with tab4:
+    with tab2:
 
         st.markdown("<div class='glow'>Mission Data Explorer</div>", unsafe_allow_html=True)
     
@@ -803,7 +735,7 @@ elif st.session_state.page=="dashboard":
 
 
 
-    with tab5:
+    with tab3:
 
 
         
@@ -857,7 +789,7 @@ elif st.session_state.page=="dashboard":
 
 
 
-    with tab6:
+    with tab4:
 
         st.markdown("<div class='glow'>Mission Analytics</div>", unsafe_allow_html=True)
     
@@ -1003,7 +935,7 @@ elif st.session_state.page=="dashboard":
     
 
           
-    with tab7:
+    with tab5:
 
         st.markdown("<div class='glow'>Comparative Insights</div>", unsafe_allow_html=True)
     
@@ -1024,7 +956,7 @@ elif st.session_state.page=="dashboard":
         st.plotly_chart(fig, use_container_width=True)
 
 
-    with tab8:
+    with tab6:
 
 
 
