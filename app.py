@@ -981,6 +981,66 @@ elif st.session_state.page=="dashboard":
         Developed for CRS Artificial Intelligence course.
         
         """)
+        questions = [
+        "🚀 What is RocketViz AI?",
+        "⚙ How does the rocket simulation calculate altitude?",
+        "📦 How does adding more payload affect altitude?",
+        "🔥 How does increasing thrust affect launch success?",
+        "🌬 Does lower drag at higher altitudes improve speed?",
+        "🛰 How long would it take a rocket to reach orbit?",
+        "📊 Can I compare simulation values to real mission data?",
+        "⛽ How does fuel consumption affect rocket performance?",
+        "📉 What factors cause rocket launch failure in the simulator?",
+        "🔬 How can this simulator help understand real rocket missions?"
+        ]
+        selected = st.selectbox("Select a Question", questions)
+
+        st.markdown(f"""
+        <div class="glass">
+        <h3>{selected}</h3>
+        <p style="font-size:18px">{answers[selected]}</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        answers = {
+
+        "🚀 What is RocketViz AI?":
+        "RocketViz AI is an interactive platform that combines rocket launch simulation with space mission data analytics. It allows users to explore how physics variables such as thrust, fuel, drag, and payload influence rocket performance.",
+        
+        "⚙ How does the rocket simulation calculate altitude?":
+        "The simulator calculates altitude using physics principles. Thrust provides upward force while gravity and drag oppose motion. The resulting acceleration changes velocity, which is then integrated over time to estimate altitude.",
+        
+        "📦 How does adding more payload affect altitude?":
+        "Increasing payload increases the rocket's total mass. A heavier rocket requires more thrust to achieve the same acceleration. If thrust remains constant, higher payload reduces maximum altitude and may even prevent successful launch.",
+        
+        "🔥 How does increasing thrust affect launch success?":
+        "Greater thrust increases upward force and improves acceleration. If thrust is significantly higher than the combined effects of gravity and drag, the rocket launches more efficiently and reaches higher altitude.",
+        
+        "🌬 Does lower drag at higher altitudes improve speed?":
+        "Yes. As rockets climb higher, air density decreases, which reduces aerodynamic drag. Lower drag allows rockets to accelerate more efficiently and maintain higher speeds.",
+        
+        "🛰 How long would it take a rocket to reach orbit?":
+        "Typical rockets take around 8–10 minutes to reach Low Earth Orbit (LEO). The exact time depends on thrust, payload mass, fuel efficiency, and aerodynamic drag.",
+        
+        "📊 Can I compare simulation values to real mission data?":
+        "Yes. The dashboard includes real mission datasets containing payload weight, fuel consumption, mission cost, and success rates. These can be compared with simulation results to understand how real missions behave.",
+        
+        "⛽ How does fuel consumption affect rocket performance?":
+        "As fuel burns, rocket mass decreases, which improves acceleration. However, once fuel is depleted, thrust stops and the rocket can no longer accelerate.",
+        
+        "📉 What factors cause rocket launch failure in the simulator?":
+        "Launch failure may occur if thrust is too low compared to rocket mass, payload is too heavy, or drag is too high. These factors prevent the rocket from overcoming gravitational forces.",
+        
+        "🔬 How can this simulator help understand real rocket missions?":
+        "The simulator helps visualize how physical variables interact during launch. By adjusting thrust, payload, fuel, and drag, users can explore scenarios similar to real rocket engineering challenges."
+        }
+    
+        st.markdown(f"""
+        <div class="glass">
+        <h3>{selected}</h3>
+        <p style="font-size:18px">{answers[selected]}</p>
+        </div>
+        """,unsafe_allow_html=True)
 
 
 
