@@ -211,7 +211,8 @@ This simulation generates a rocket altitude trajectory over time.
 4. Deploy the app.  
 
 🔗 **Live Streamlit Application:**  
-[Paste your Streamlit app URL here]  
+https://4hms4mjc6aqnwtijqoc7bb.streamlit.app/
+
 
 ---
 # 📂 Repository Structure
@@ -265,5 +266,169 @@ plotly
 - [Streamlit Documentation](https://docs.streamlit.io)  
 - [Plotly Python Library](https://plotly.com/python)  
 - [Seaborn Documentation](https://seaborn.pydata.org)  
+
+---
+
+---
+
+# 🔗 Integration Details
+
+The **RocketViz AI** application integrates several Python libraries and tools to create a complete data analysis and simulation platform.
+
+### Core Integrations
+
+**Streamlit**
+- Used to build the interactive web dashboard interface.
+- Provides widgets such as sliders, dropdown menus, and tabs.
+
+**Pandas**
+- Handles dataset loading, cleaning, and preprocessing.
+- Enables structured data manipulation.
+
+**NumPy**
+- Used for numerical computations in the rocket simulation.
+
+**Plotly**
+- Generates interactive graphs and visualizations.
+- Allows users to explore mission data dynamically.
+
+**Matplotlib & Seaborn**
+- Used for additional statistical visualizations such as correlation heatmaps.
+
+### System Workflow
+
+1. Dataset is loaded using **Pandas**
+2. Data is cleaned and preprocessed
+3. Rocket physics simulation runs using **NumPy calculations**
+4. Visualizations are created using **Plotly / Matplotlib**
+5. Results are displayed in an **interactive Streamlit dashboard**
+
+---
+
+# ☁ Deployment Instructions
+
+The application is deployed using **Streamlit Cloud**.
+
+### Step 1 — Create a GitHub Repository
+
+Create a new repository and upload the project files:
+
+
+
+---
+
+### Step 2 — Prepare `requirements.txt`
+
+Ensure the file contains all required dependencies:
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+
+
+
+---
+
+### Step 3 — Deploy on Streamlit Cloud
+
+1. Visit **https://streamlit.io/cloud**
+2. Sign in using your **GitHub account**
+3. Click **New App**
+4. Select your **GitHub repository**
+5. Choose the **app.py** file as the main application
+6. Click **Deploy**
+
+---
+
+### Step 4 — Access the Live App
+
+After deployment, Streamlit will generate a **public URL** where the dashboard can be accessed.
+
+Example:
+https://4hms4mjc6aqnwtijqoc7bb.streamlit.app/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+# 📊 What Does This Web App Visualise?
+
+The **RocketViz AI dashboard** visualizes both **rocket physics simulations** and **real-world space mission data**.
+
+### Rocket Simulation Visualizations
+
+The simulation allows users to observe:
+
+- Rocket **altitude over time**
+- Effect of **thrust on rocket acceleration**
+- Impact of **payload weight on launch performance**
+- Influence of **drag and fuel consumption**
+
+Users can modify parameters using **interactive sliders** to observe how rockets behave during launch.
+
+---
+
+### Mission Data Visualizations
+
+The dashboard also provides insights into historical mission data through several graphs:
+
+**Scatter Plot**
+- Relationship between **payload weight and fuel consumption**
+
+**Bar Chart**
+- Comparison of **mission cost across different launch vehicles**
+
+**Line Chart**
+- Relationship between **mission duration and travel distance**
+
+**Box Plot**
+- Distribution of **crew sizes across missions**
+
+**Correlation Heatmap**
+- Statistical relationships between mission variables such as:
+  - payload weight
+  - mission cost
+  - fuel consumption
+  - mission duration
+
+---
+
+These visualizations help users understand **patterns and relationships in space mission data** while also exploring **rocket launch physics** through simulation.
+
+---
+
+# ✅ Project Completion Checklist
+
+- [x] Dataset loaded and cleaned using **Pandas**
+- [x] Multiple data visualizations created
+- [x] Interactive graphs implemented using **Plotly**
+- [x] Rocket launch physics simulation developed
+- [x] Streamlit dashboard interface designed
+- [x] Interactive controls added for user inputs
+- [x] Mission dataset explorer implemented
+- [x] Application deployed using **Streamlit Cloud**
+- [x] GitHub repository created with documentation
 
 ---
