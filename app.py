@@ -811,12 +811,27 @@ elif st.session_state.page=="dashboard":
         
         fig1=px.line(df_sim,x="Time",y="Altitude",title="Altitude vs Time")
         st.plotly_chart(fig1,use_container_width=True)
+        show_insight(
+        "The altitude increases rapidly during the early phase of launch due to strong "
+        "engine thrust. As the rocket climbs higher, gravitational forces and decreasing "
+        "fuel levels affect acceleration, causing the rate of altitude increase to change "
+        "over time."
+)
         
         fig2=px.line(df_sim,x="Time",y="Velocity",title="Velocity vs Time")
         st.plotly_chart(fig2,use_container_width=True)
-        
+        show_insight(
+        "Rocket velocity increases as long as thrust exceeds gravitational and drag forces. "
+        "As fuel burns and the rocket becomes lighter, acceleration improves temporarily. "
+        "However, once fuel is depleted, velocity growth slows and eventually stabilizes."
+        )
         fig3=px.line(df_sim,x="Time",y="Fuel",title="Fuel Remaining")
         st.plotly_chart(fig3,use_container_width=True)
+        show_insight(
+        "The fuel remaining decreases steadily as the rocket engines burn propellant to "
+        "generate thrust. This gradual reduction in fuel also decreases the rocket's mass, "
+        "which improves acceleration during the later stages of powered flight."
+        )
 
 
 
@@ -879,6 +894,21 @@ elif st.session_state.page=="dashboard":
             )
     
             st.plotly_chart(fig, use_container_width=True)
+            show_insight(
+            "Mission costs vary significantly across launch vehicles. "
+            "Some rockets provide more cost-efficient launches while "
+            "others prioritize payload capacity or mission reliability."
+            )
+        
+
+
+
+
+
+
+
+
+        
     
         # ===============================
         # GRAPH 3
@@ -900,6 +930,18 @@ elif st.session_state.page=="dashboard":
             )
     
             st.plotly_chart(fig, use_container_width=True)
+            show_insight(
+            "Missions traveling farther distances tend to have longer durations. "
+            "This reflects the increased travel time required for deep space "
+            "or long-distance orbital missions."
+            )
+            
+
+
+
+
+
+        
     
         # ===============================
         # GRAPH 4
@@ -914,6 +956,11 @@ elif st.session_state.page=="dashboard":
             )
     
             st.plotly_chart(fig, use_container_width=True)
+            show_insight(
+            "Most missions involve small astronaut crews. "
+            "This is because larger crews require more life-support "
+            "systems and increase mission complexity."
+            )
     
         # ===============================
         # GRAPH 5
@@ -930,6 +977,14 @@ elif st.session_state.page=="dashboard":
             )
     
             st.plotly_chart(fig, use_container_width=True)
+            show_insight(
+            "The heatmap reveals relationships between mission variables. "
+            "Strong correlations between payload, fuel consumption, and "
+            "mission cost highlight how resource-heavy missions require "
+            "greater financial investment."
+            )
+
+        
     
         # ===============================
         # GRAPH 6
@@ -947,6 +1002,12 @@ elif st.session_state.page=="dashboard":
             )
     
             st.plotly_chart(fig, use_container_width=True)
+            show_insight(
+            "Successful missions generally show a balanced relationship between payload weight "
+            "and fuel consumption. Missions carrying heavier payloads require significantly more "
+            "fuel to generate enough thrust to overcome gravity. If fuel is insufficient relative "
+            "to payload weight, the likelihood of mission failure increases."
+            )
     
         # ===============================
         # GRAPH 7
@@ -969,6 +1030,12 @@ elif st.session_state.page=="dashboard":
             )
     
             st.plotly_chart(fig, use_container_width=True)
+            show_insight(
+            "Mission cost alone does not guarantee mission success. While successful missions "
+            "often involve higher budgets due to advanced technology and safety measures, "
+            "some expensive missions still fail due to technical issues, launch conditions, "
+            "or unexpected system failures."
+            )
 
 
     
@@ -993,6 +1060,12 @@ elif st.session_state.page=="dashboard":
         )
     
         st.plotly_chart(fig, use_container_width=True)
+        show_insight(
+        "The simulation results closely resemble patterns observed in real mission data. "
+        "In both cases, higher payload masses require increased fuel consumption and thrust. "
+        "This comparison helps validate that the simulation behaves realistically when "
+        "compared with historical mission records."
+        )
 
 
     with tab6:
