@@ -272,6 +272,40 @@ box-shadow:0 0 20px #00e5ff;
 """,unsafe_allow_html=True)
 
 
+st.markdown("""
+<style>
+
+.insight-box {
+    border: 2px solid #00f7ff;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 10px;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px #00f7ff;
+    color: white;
+    font-size: 16px;
+}
+
+.insight-title {
+    color: #00f7ff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+
+def show_insight(text):
+    st.markdown(f"""
+    <div class="insight-box">
+        <div class="insight-title">🔎 Insight</div>
+        {text}
+    </div>
+    """, unsafe_allow_html=True)    
+
+
 # =========================================================
 # SESSION STATE
 # =========================================================
@@ -825,6 +859,11 @@ elif st.session_state.page=="dashboard":
             )
     
             st.plotly_chart(fig, use_container_width=True)
+            show_insight(
+            "Heavier payloads generally require greater fuel consumption. "
+            "This indicates that rockets carrying larger cargo need more energy "
+            "to overcome gravitational forces and achieve successful launch."
+            )
     
         # ===============================
         # GRAPH 2
