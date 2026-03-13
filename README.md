@@ -269,6 +269,32 @@ plotly
 
 ---
 
+
+#App Screenshots
+-<img width="1594" height="645" alt="image" src="https://github.com/user-attachments/assets/3cef9443-9805-4939-b1a7-ffd136a4bcf9" />
+**Tabs and Dashboard**
+
+-<img width="1581" height="723" alt="image" src="https://github.com/user-attachments/assets/97311acb-5879-4d55-8aae-2d724ac2048b" />
+**Mission Data Explorer**
+
+-<img width="1632" height="744" alt="image" src="https://github.com/user-attachments/assets/40aca5c6-7d35-4e5f-a1da-5f037c346885" />
+**Rocket Physics Stimulation**
+
+-**MIssion Analytics**
+
+-<img width="1600" height="565" alt="image" src="https://github.com/user-attachments/assets/0cdb20da-9a0c-434c-bac0-efb326834d76" />
+**Comparision**
+
+-<img width="1592" height="590" alt="image" src="https://github.com/user-attachments/assets/4d8ac88e-bf37-4c5e-b59e-3921b3c00b49" />
+**About Project**
+
+-<img width="260" height="841" alt="image" src="https://github.com/user-attachments/assets/cf955aa5-e3ba-4c69-baf1-13134e9bd2ca" />
+**Sidebar**
+
+
+
+
+
 ---
 
 # 🔗 Integration Details
